@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <include relativeToChangelogFile="true" file="changelog-1.0.0.xml"/>
+
+    <changeSet id="import data aircraft" author="RBogusz">
+        <loadData tableName="aircraft" file="./liquibase/data/aircraft.csv"/>
+    </changeSet>
+
+    <changeSet id="import data airports" author="RBogusz">
+        <loadData tableName="airports" file="./liquibase/data/airports.csv"/>
+    </changeSet>
+
+    <changeSet id="import data carriers" author="RBogusz">
+        <loadData tableName="carriers" file="./liquibase/data/carriers.csv"/>
+    </changeSet>
+
+    <changeSet id="import data flights" author="RBogusz">
+        <loadData tableName="flights" file="./liquibase/data/flights.csv"/>
+    </changeSet>
+
+</databaseChangeLog>

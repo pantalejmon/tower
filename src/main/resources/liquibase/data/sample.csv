@@ -1,0 +1,3 @@
+flight_direction,carrier,aircraft,flight_type,schedule_time,estimated_time,actual_time,remote_airport
+ARRIVAL,1,2,SCHEDULE,2021-02-24T12:25:00UTC,2021-02-24T12:28:00UTC,2021-02-24T12:32:00UTC,2
+DEPARTURE,1,2,SCHEDULE,2021-02-24T12:25:00UTC,2021-02-24T12:28:00UTC,2021-02-24T12:32:00UTC,2

@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet id="create table aircraft" author="RBogusz">
+        <createTable tableName="aircraft">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="iata_code" type="varchar(255)"/>
+            <column name="icao_code" type="varchar(255)"/>
+            <column name="model_name" type="varchar(255)"/>
+            <column name="manufacturer" type="varchar(255)"/>
+            <column name="engine_type" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create table airports" author="RBogusz">
+        <createTable tableName="airports">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="iata_code" type="varchar(255)"/>
+            <column name="icao_code" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create table carriers" author="RBogusz">
+        <createTable tableName="carriers">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="iata_code" type="varchar(255)"/>
+            <column name="icao_code" type="varchar(255)"/>
+            <column name="name" type="varchar(255)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create table flights" author="RBogusz">
+        <createTable tableName="flights">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="flight_direction" type="varchar(25)" />
+            <column name="carrier" type="bigint" />
+            <column name="aircraft" type="bigint" />
+            <column name="flight_type" type="varchar(255)" />
+            <column name="schedule_time" type="DATETIME" />
+            <column name="estimated_time" type="DATETIME" />
+            <column name="actual_time" type="DATETIME" />
+            <column name="remote_airport" type="bigint" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
