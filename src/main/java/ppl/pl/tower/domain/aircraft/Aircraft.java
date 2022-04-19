@@ -1,23 +1,20 @@
 package ppl.pl.tower.domain.aircraft;
 
-import lombok.Data;
 
-import javax.persistence.*;
+import ppl.pl.tower.domain.code.Code;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
-@Data
-@Entity
-@Table(name = "aircraft")
+/**
+ * Do uzupełnienia/Rozszerzenia
+ *
+ * Stworzyć klasyczny moduł typu CRUD dla przedstawionego poniżej modelu.
+ * Moduł powinnien udostępniać RESTowe api oraz umożliwiać komunikację z resztą aplikacji
+ * Dane powinny być pobierane z bazy danych wpiętej do aplikacji
+ *
+ */
 public class Aircraft {
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
     private Long id;
-    private String iataCode;
-    private String icaoCode;
+    private Code code;
     private String modelName;
     private String manufacturer;
-
-    @Enumerated(EnumType.STRING)
     private EngineType engineType;
 }
