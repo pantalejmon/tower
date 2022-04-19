@@ -1,9 +1,7 @@
 package ppl.pl.tower.domain.code;
 
-import lombok.Data;
-
-@Data
 public class Code {
+    private Long id;
     private String iata;
     private String icao;
 }
