@@ -7,7 +7,6 @@
 2. Na podstawie parametru approachingCertificationDeadline zdefiniowanego w konfiguracji aplikacji (application.yml)
    wyświetlić wszystkie statki powietrzne, którym zbliża się termin ważności certyfikacji.
 
-
 3. Przygotować CRUD (zgodnie z zasadami **REST**) dla encji Aircraft na podstawie zaproponowanego modelu.
    Zapytania powinny być obsłużone zgodnie z definicją pliku "api-requests/aircraft.http"
     * Pobieranie rekordów uwzględniając:
@@ -22,7 +21,5 @@
    **Nie tworzyć dodatkowych, niewyszczególnionych powyżej końcówek!**
 
 
-4. Udowodnić działanie wykonanych zadań CRUD w testach (do wyboru metoda)
+4. (**jeśli starczy czasu**) Udowodnić działanie wykonanych zadań CRUD w testach (do wyboru metoda)
 
-
-5. Zadanie dodatkowe: Autoryzacja za pomocą przekazanego tokenu
