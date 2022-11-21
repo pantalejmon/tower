@@ -1,4 +1,8 @@
 spring:
+  h2.console:
+    enabled: true
+    path: "/h2"
+
   jpa:
     hibernate:
       ddl-auto: validate
@@ -9,7 +13,9 @@ spring:
     username: sa
     password: sa
 
-
   liquibase:
     change-log: classpath:/liquibase/changelog-master.xml
+
+tower:
+  approachingCertificationDeadline: 3 //liczba dni określająca bliskość terminu ważności certyfikacji
 
